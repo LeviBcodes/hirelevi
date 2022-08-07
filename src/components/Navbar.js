@@ -8,7 +8,7 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav)
 
     return (
-       <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
+       <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 shadow-md">
             <div>
                 <h1 className='text-5xl text-white font-extrabold text-pink-600'>LB</h1>
             </div>
@@ -17,9 +17,9 @@ const Navbar = () => {
             <ul className='hidden md:flex'>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>Home</li>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>About</li>
-                <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>Contact</li>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>Skills</li>
-                <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>Work</li>
+                <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>Projects</li>
+                <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>Contact</li>
             </ul>
 
             {/* Dropdown Button */}
