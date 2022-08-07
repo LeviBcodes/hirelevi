@@ -13,8 +13,8 @@ const Projects = () => {
                 <div style={{backgroundImage: `url(${Moviedeets})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
                     {/* Hover effects */}
                     <div className='opacity-0 group-hover:opacity-95'>
-                        <span className='text-2xl font-bold text-black tracking-wider'>
-                            React Js Application
+                        <span className='text-2xl font-bold text-white tracking-wider px-3 mx-auto'>
+                            Moviedeets.com
                         </span>
                         <div className='pt-8 text-center'>
                             <a href="http://www.moviedeets.com" target="_blank">
