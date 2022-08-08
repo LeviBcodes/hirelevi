@@ -22,7 +22,7 @@ const Skills = () => {
             <img className="w-20 mx-auto" src={Javascript} alt="javascript logo" />
             <p className='my-4 font-medium'>JavaScript</p>
           </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 pt-6'>
             <img className="w-20 mx-auto" src={Php} alt="php logo" />
             <p className='my-4 font-medium'>PHP</p>
           </div>
