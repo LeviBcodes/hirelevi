@@ -5,7 +5,7 @@ import Backdrop from "./Backdrop";
 const dropIn = {
     hidden: {
         y: "-100vh",
-        opacity: 0
+        opacity: 0,
     },
     visible: {
         y:"0",
@@ -26,8 +26,7 @@ const dropIn = {
 const MovieDeetsModal = ({handleClose, text}) => {
     return (
         <Backdrop onClick={handleClose}>
-            <motion.div onClick={ (e) => e.stopPropagtion() } className="modal orange-gradient" variants={dropIn} initial="hidden" exit="exit">
-
+            <motion.div onClick={ (e) => e.stopPropagtion() } className="modal bg-blue-400" variants={dropIn} initial="hidden" animate="visible" exit="exit">
             </motion.div>
         </Backdrop>
     )
