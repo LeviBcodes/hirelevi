@@ -7,6 +7,7 @@ import ReactJS from '../assets/react.png'
 import Sql from '../assets/sql.png'
 import Github from '../assets/github.png'
 import Laravel from '../assets/laravel.png'
+import { motion } from 'framer-motion'
 
 const Skills = () => {
   return (
@@ -17,7 +18,7 @@ const Skills = () => {
           <p className='text-4xl font-bold inline border-b-4 border-pink-600'>Skills</p>
           <p className='py-4 text-xl font-bold'>These are the technologies I've worked with.</p>
         </div>
-        <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
+        <motion.div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8' >
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className="w-20 mx-auto" src={Javascript} alt="javascript logo" />
             <p className='my-4 font-medium'>JavaScript</p>
@@ -50,7 +51,7 @@ const Skills = () => {
             <img className="w-20 mx-auto" src={Laravel} alt="laravel logo" />
             <p className='my-4 font-medium'>Laravel</p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

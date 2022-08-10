@@ -27,3 +27,26 @@
         hsla(242, 74%, 61%, 0.8)
     )!important;
 }
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    width: clamp(50%, 700px, 90%);
+    height: min(50%, 90vh);
+    margin: auto;
+    padding: 0 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
