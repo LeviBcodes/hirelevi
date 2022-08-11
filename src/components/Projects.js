@@ -11,7 +11,7 @@ const Projects = () => {
   const open = () => setModalOpen(true)
 
   return (
-    <div name='projects' className='w-full md:h-screen bg-[#0a192f] text-gray-300 px-4'>
+    <div name='projects' className='w-full md:h-screen bg-transparent text-gray-300 px-4'>
         <div className='max-w-[1000px] mx-auto flex py-4 flex-col justify-center w-full h-full'>
             <div className='pb-8 text-center'>
                 <p className='text-4xl font-bold inline border-b-4 border-pink-600'>Projects</p>

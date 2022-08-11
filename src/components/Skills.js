@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 
 const Skills = () => {
   return (
-    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300 px-4'>
+    <div name='skills' className='w-full h-screen bg-transparent text-gray-300 px-4'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto flex flex-col justify-center w-full h-full'>
         <div className='text-center'>
