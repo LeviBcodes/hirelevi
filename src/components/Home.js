@@ -1,16 +1,93 @@
-import React from 'react'
+import React, { useInsertionEffect, useEffect, useState } from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import { Link } from 'react-scroll'
+import { useAnimation, motion, AnimatePresence } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 const Home = () => {
+    const helloAppear = {
+        hidden: {
+            opacity: 0,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 1.2,
+            },
+        },
+        exit: {
+            opacity: 0,
+        }
+    }
+
+    const nameAppear = {
+        hidden: {
+            opacity: 0,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 1.2,
+                type: 'tween',
+                delay: .2,
+            },
+        },
+        exit: {
+            opacity: 0,
+        }
+    }
+
+    const titleAppear = {
+        hidden: {
+            opacity: 0,
+            y: "-10vh",
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.9,
+                type: 'tween',
+                delay: .12,
+            },
+        },
+        exit: {
+            opacity: 0,
+            y: "-10vh",
+        }
+    }
+
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+    }, [controls, inView]);
+
   return (
     <div name='home' className='bg-[#0a192f] w-full h-screen'>
 
         {/* Container */}
-        <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-            <p className='text-pink-600 text-2xl'>Hello, my name is</p>
-            <h1 className='text-4xl sm:text-7xl font-bold text-white'>Levi Burland</h1>
-            <h2 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>I'm a Full Stack Web Developer.</h2>
+        <div ref={ref} className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+            <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+                {inView && 
+                    <motion.p className='text-pink-600 text-2xl' variants={helloAppear} animate="visible" initial="hidden" exit="exit">Hello, my name is</motion.p>
+                }
+            </AnimatePresence>
+            <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+                {inView && 
+                    <motion.h1 className='text-4xl sm:text-7xl font-bold text-white' variants={nameAppear} animate="visible" initial="hidden" exit="exit">Levi Burland</motion.h1>
+                }
+            </AnimatePresence>
+            <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+                {inView && 
+                    <motion.h2 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]' variants={titleAppear} animate="visible" initial="hidden" exit="exit">I'm a Full Stack Web Developer.</motion.h2>
+                }
+            </AnimatePresence>
             <p className='text-[#8892b0] py-4 max-w-[700px]'>I like to build amazing web applications</p>
             <div>
                 <Link to="projects" smooth={true} offset={50} duration={500}>
