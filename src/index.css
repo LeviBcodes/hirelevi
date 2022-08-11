@@ -54,10 +54,10 @@
 
 .progress-bar {
     position: fixed;
-    top: 79px;
+    top: 76px;
     left: 0;
     right: 0;
-    height: 10px;
+    height: 5px;
     background: linear-gradient(
         to right,
         hsla(327, 60%, 56%, 0.8),

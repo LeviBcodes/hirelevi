@@ -13,7 +13,7 @@ const About = () => {
             opacity: 1,
             x: 0,
             transition: {
-                duration: 1,
+                duration: .8,
             },
         },
         exit: {
@@ -32,7 +32,9 @@ const About = () => {
             x: 0,
             transition: {
                 duration: .6,
-                type: 'tween',
+                type: 'spring',
+                damping: 55, 
+                stiffness: 400,
             },
         },
         exit: {
@@ -50,9 +52,11 @@ const About = () => {
             opacity: 1,
             x: 0,
             transition: {
-                duration: .6,
-                type: 'tween',
+                duration: .3,
+                type: 'spring',
                 delay: .1,
+                damping: 55, 
+                stiffness: 400,
             },
         },
         exit: {
@@ -72,12 +76,12 @@ const About = () => {
 
   return (
     <div name="about" className="w-full h-screen bg-transparent text-gray-300 overflow-hidden">
-        <div className='flex flex-col justify-center items-center w-full h-full'>
+        <div className='flex flex-col justify-center items-center w-full h-full '>
             <div ref={ref} className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
                 <div className='sm:text-right pb-8 pl-4'>
                     <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                         {inView && 
-                            <motion.p className='text-4xl font-bold inline border-b-4 border-pink-600' variants={appear} animate="visible" initial="hidden" exit="exit">About</motion.p>
+                            <motion.p className='text-4xl font-bold inline border-b-4 border-pink-600' variants={appear} animate="visible" initial="hidden" exit="exit">About Myself</motion.p>
                         }
                     </AnimatePresence>
                 </div>

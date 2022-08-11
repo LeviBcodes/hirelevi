@@ -47,12 +47,12 @@ const Navbar = ({toggle, active}) => {
             </ul>
 
             {/* Dropdown Button */}
-            <div onClick={handleClick} className='md:hidden z-10 text-3xl hover:scale-110 duration-200'>
+            <div onClick={handleClick} className='md:hidden z-20 text-3xl hover:scale-110 duration-200'>
                 {!nav ? <FaBars /> : <FaTimes />}
             </div>
 
             {/* Mobile Menu */}
-            <ul className={!nav ? 'hidden' : 'opacity-95 absolute top-0 left-0 w-full h-screen bg-gradient-to-br from-[#0a193f] to-[#0a192f] flex flex-col justify-center items-center z-10'}>
+            <ul className={!nav ? 'hidden' : ' absolute top-0 left-0 w-full h-screen bg-gradient-to-br from-[#0a193f] to-[#062969] flex flex-col justify-center items-center z-10'}>
                 <li className='py-6 font-medium text-4xl hover:scale-110 hover:text-white duration-200 hover:font-bold'>
                     <Link onClick={handleClick} to="home" smooth={true} offset={50} duration={500}>
                         Home
