@@ -70,9 +70,6 @@ const About = () => {
         }
     }, [controls, inView]);
 
-  
-
-
   return (
     <div name="about" className="w-full h-screen bg-transparent text-gray-300 overflow-hidden">
         <div className='flex flex-col justify-center items-center w-full h-full'>

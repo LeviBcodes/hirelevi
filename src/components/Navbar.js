@@ -6,7 +6,7 @@ import { Link } from 'react-scroll'
 import { motion, useAnimation, useScroll } from "framer-motion";
 
 
-const Navbar = () => {
+const Navbar = ({toggle, active}) => {
     const[nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
     const { scrollYProgress} = useScroll()
@@ -14,33 +14,33 @@ const Navbar = () => {
     return (
        <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 shadow-md z-10">
             <div>
-                <h1 className='text-5xl text-white font-extrabold text-pink-600'>LB</h1>
+                <h1 className='text-5xl font-extrabold text-pink-600'>LB</h1>
             </div>
 
             {/* Menu */}
             <ul className='hidden md:flex'>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
-                    <Link to="home" smooth={true} offset={50} duration={500}>
+                    <Link to="home" smooth={true} offset={50} duration={500} spy={true} activeClass='active-link'>
                         Home
                     </Link>
                 </li>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
-                    <Link to="about" smooth={true} offset={50} duration={500}>
+                    <Link to="about" smooth={true} offset={50} duration={500} spy={true} activeClass='active-link'>
                         About
                     </Link>
                 </li>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
-                    <Link to="skills" smooth={true} offset={50} duration={500}>
+                    <Link to="skills" smooth={true} offset={50} duration={500} spy={true} activeClass='active-link'>
                         Skills
                     </Link>
                 </li>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
-                    <Link to="projects" smooth={true} offset={50} duration={500}>
+                    <Link to="projects" smooth={true} offset={50} duration={500} spy={true} activeClass='active-link'>
                         Projects
                     </Link>
                 </li>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
-                    <Link to="contact" smooth={true} offset={50} duration={500}>
+                    <Link to="contact" smooth={true} offset={50} duration={500} spy={true} activeClass='active-link'>
                         Contact
                     </Link>
                 </li>
