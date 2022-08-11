@@ -31,7 +31,7 @@ const Home = () => {
             transition: {
                 duration: 1.2,
                 type: 'tween',
-                delay: .2,
+                delay: .3,
             },
         },
         exit: {
@@ -42,15 +42,15 @@ const Home = () => {
     const titleAppear = {
         hidden: {
             opacity: 0,
-            y: "-10vh",
+            y: "-25vh",
         },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.9,
+                duration: 1,
                 type: 'tween',
-                delay: .12,
+                delay: .1,
             },
         },
         exit: {
@@ -75,7 +75,7 @@ const Home = () => {
         <div ref={ref} className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
             <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                 {inView && 
-                    <motion.p className='text-pink-600 text-2xl' variants={helloAppear} animate="visible" initial="hidden" exit="exit">Hello, my name is</motion.p>
+                    <motion.p className='text-pink-600 text-3xl' variants={helloAppear} animate="visible" initial="hidden" exit="exit">Hello, my name is</motion.p>
                 }
             </AnimatePresence>
             <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
@@ -88,10 +88,9 @@ const Home = () => {
                     <motion.h2 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]' variants={titleAppear} animate="visible" initial="hidden" exit="exit">I'm a Full Stack Web Developer.</motion.h2>
                 }
             </AnimatePresence>
-            <p className='text-[#8892b0] py-4 max-w-[700px]'>I like to build amazing web applications</p>
-            <div>
+            <div className='py-5'>
                 <Link to="projects" smooth={true} offset={50} duration={500}>
-                    <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 duration-300 hover:rounded-md'>View My Work 
+                    <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 duration-300 hover:rounded-md font-medium'>View My Work 
                         <span className='group-hover:rotate-90 group-hover:scale-105 duration-300'>
                             <HiArrowNarrowRight className='ml-1' />
                         </span>
