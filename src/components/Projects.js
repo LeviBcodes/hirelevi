@@ -18,9 +18,9 @@ const Projects = () => {
                 <p className='py-6'>Check out some of my recent projects</p>
             </div>
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-                <div style={{backgroundImage: `url(${Moviedeets})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+                <div style={{backgroundImage: `url(${Moviedeets})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div group-hover:opacity-50'>
                     {/* Hover effects */}
-                    <div className='opacity-0 group-hover:opacity-95'>
+                    <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold text-white tracking-wider px-3 mx-auto'>
                             Moviedeets.com
                         </span>
