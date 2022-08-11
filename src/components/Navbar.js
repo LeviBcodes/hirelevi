@@ -3,12 +3,13 @@ import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill} from 'react-icons/bs'
 import { Link } from 'react-scroll'
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useScroll } from "framer-motion";
 
 
 const Navbar = () => {
     const[nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
+    const { scrollYProgress} = useScroll()
 
     return (
        <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 shadow-md z-10">
@@ -51,7 +52,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu */}
-            <ul className={!nav ? 'hidden' : 'opacity-95 absolute top-0 left-0 w-full h-screen bg-gradient-to-br from-[#0a193f] to-[#0a192f] flex flex-col justify-center items-center'}>
+            <ul className={!nav ? 'hidden' : 'opacity-95 absolute top-0 left-0 w-full h-screen bg-gradient-to-br from-[#0a193f] to-[#0a192f] flex flex-col justify-center items-center z-10'}>
                 <li className='py-6 font-medium text-4xl hover:scale-110 hover:text-white duration-200 hover:font-bold'>
                     <Link onClick={handleClick} to="home" smooth={true} offset={50} duration={500}>
                         Home
@@ -82,17 +83,17 @@ const Navbar = () => {
             <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
                 <ul>
                     <li className='w-[160px] h-[60px] bg-[#0077b5] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 font-bold rounded-lg'>
-                        <a href="https://www.linkedin.com/in/levi-burland-a1027b247/" target="_blank" className='flex justify-between items-center w-full text-gray-300 text-lg'>
+                        <a href="https://www.linkedin.com/in/levi-burland-a1027b247/" target="_blank" rel="noreferrer" className='flex justify-between items-center w-full text-gray-300 text-lg'>
                             LinkedIn <FaLinkedin className='hover:scale-105 duration-300' size={30}/>
                         </a>
                     </li>
                     <li className='w-[160px] h-[60px] bg-[#171515] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 font-bold rounded-lg'>
-                        <a href="https://www.github.com/LeviBcodes" target="_blank" className='flex justify-between items-center w-full text-gray-300 text-lg'>
+                        <a href="https://www.github.com/LeviBcodes" target="_blank" rel="noreferrer" className='flex justify-between items-center w-full text-gray-300 text-lg'>
                             GitHub <FaGithub className='hover:scale-105 duration-300' size={30}/>
                         </a>
                     </li>
                     <li className='w-[160px] h-[60px] bg-[#ff5800] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 font-bold rounded-lg'>
-                        <a href="" className='flex justify-between items-center w-full text-gray-300 text-lg'>
+                        <a href="" className='flex justify-between items-center w-full text-gray-300 text-lg' rel="noreferrer">
                             Email <HiOutlineMail className='hover:scale-105 duration-300' size={30}/>
                         </a>
                     </li>
@@ -103,6 +104,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
+            <motion.div class="progress-bar" style={{scaleX: scrollYProgress}} />
        </div>
     )
 }

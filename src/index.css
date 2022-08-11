@@ -51,3 +51,17 @@
     flex-direction: column;
     align-items: center;
 }
+
+.progress-bar {
+    position: fixed;
+    top: 79px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(
+        to right,
+        hsla(327, 60%, 56%, 0.8),
+        rgba(112, 226, 255, 0.8)
+    );
+    transform-origin: 0%;
+  }
