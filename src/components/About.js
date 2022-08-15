@@ -77,7 +77,7 @@ const About = () => {
   return (
     <div name="about" className="w-full h-screen bg-transparent text-gray-300 overflow-hidden">
         <div className='flex flex-col justify-center items-center w-full h-full '>
-            <div ref={ref} className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
+            <div ref={ref} className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8'>
                 <div className='sm:text-right pb-8 pl-4'>
                     <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                         {inView && 

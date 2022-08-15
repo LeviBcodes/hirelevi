@@ -30,6 +30,26 @@ const Skills = () => {
     }
   }
 
+  const slideUp = {
+    hidden: {
+      opacity: 0,
+      y: "-25vh",
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            type: 'tween',
+            delay: .1,
+        },
+    },
+    exit: {
+        opacity: 0,
+        y: "-10vh",
+    }
+  }
+
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -51,40 +71,44 @@ const Skills = () => {
           </AnimatePresence>
           <p className='pt-7 pb-10 text-xl font-bold'>Technologies I use</p>
         </div>
-        <motion.div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center' >
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
-            <img className="w-20 mx-auto" src={Javascript} alt="javascript logo" />
-            <p className='my-4 font-medium text-xl'>JavaScript</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 pt-6 hover:cursor-pointer'>
-            <img className="w-20 mx-auto" src={Php} alt="php logo" />
-            <p className='my-4 font-medium text-xl'>PHP</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
-            <img className="w-20 mx-auto" src={ReactJS} alt="reactjs logo" />
-            <p className='my-4 font-medium text-xl'>React</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
-            <img className="w-20 mx-auto" src={Sql} alt="sql logo" />
-            <p className='my-4 font-medium text-xl'>SQL</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <img className="w-20 mx-auto" src={Html} alt="html logo" />
-            <p className='my-4 font-medium text-xl'>HTML</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
-            <img className="w-20 mx-auto" src={Css} alt="css logo" />
-            <p className='my-4 font-medium text-xl'>CSS</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
-            <img className="w-20 mx-auto" src={Github} alt="github logo" />
-            <p className='my-4 font-medium text-xl'>GitHub</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
-            <img className="w-20 mx-auto" src={Laravel} alt="laravel logo" />
-            <p className='my-4 font-medium text-xl'>Laravel</p>
-          </div>
-        </motion.div>
+        <AnimatePresence>
+          {inView &&
+            <motion.div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center' variants={slideUp} animate="visible" initial="hidden" exit="exit">
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
+                <img className="w-20 mx-auto" src={Javascript} alt="javascript logo" />
+                <p className='my-4 font-medium text-xl'>JavaScript</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 pt-6 hover:cursor-pointer'>
+                <img className="w-20 mx-auto" src={Php} alt="php logo" />
+                <p className='my-4 font-medium text-xl'>PHP</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
+                <img className="w-20 mx-auto" src={ReactJS} alt="reactjs logo" />
+                <p className='my-4 font-medium text-xl'>React</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
+                <img className="w-20 mx-auto" src={Sql} alt="sql logo" />
+                <p className='my-4 font-medium text-xl'>SQL</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                <img className="w-20 mx-auto" src={Html} alt="html logo" />
+                <p className='my-4 font-medium text-xl'>HTML</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
+                <img className="w-20 mx-auto" src={Css} alt="css logo" />
+                <p className='my-4 font-medium text-xl'>CSS</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
+                <img className="w-20 mx-auto" src={Github} alt="github logo" />
+                <p className='my-4 font-medium text-xl'>GitHub</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
+                <img className="w-20 mx-auto" src={Laravel} alt="laravel logo" />
+                <p className='my-4 font-medium text-xl'>Laravel</p>
+              </div>
+            </motion.div>
+          }
+        </AnimatePresence>
       </div>
     </div>
   )
