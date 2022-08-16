@@ -33,7 +33,7 @@ const Skills = () => {
   const slideUp = {
     hidden: {
       opacity: 0,
-      y: "-25vh",
+      y: "25vh",
     },
     visible: {
         opacity: 1,
