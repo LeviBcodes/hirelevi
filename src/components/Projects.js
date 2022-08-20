@@ -59,8 +59,8 @@ const Projects = () => {
   const open = () => setModalOpen(true)
 
   return (
-    <div name='projects' className='w-full md:h-screen bg-transparent text-gray-300 px-4'>
-        <div className='max-w-[1000px] mx-auto flex py-20 md:py-4 flex-col justify-center w-full h-full'>
+    <div name='projects' className='w-full h-screen bg-transparent text-gray-300 px-4'>
+        <div className='max-w-[1000px] mx-auto flex py-20 md:py-4 flex-col justify-center w-full h-screen sm:h-full'>
             <div ref={ref} className='pb-8 md:text-center'>
                 <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                     {inView && 

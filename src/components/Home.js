@@ -72,7 +72,7 @@ const Home = () => {
     <div name='home' className='bg-transparent w-full h-screen'>
 
         {/* Container */}
-        <div ref={ref} className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+        <div ref={ref} className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-screen sm:h-full'>
             <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                 {inView && 
                     <motion.p className='text-pink-600 text-3xl' variants={helloAppear} animate="visible" initial="hidden" exit="exit">Hello, my name is</motion.p>

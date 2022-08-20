@@ -62,7 +62,7 @@ const Skills = () => {
   return (
     <div name='skills' className='w-full h-screen bg-transparent text-gray-300 px-4'>
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto flex flex-col justify-center w-full h-full py-20'>
+      <div className='max-w-[1000px] mx-auto flex flex-col justify-center w-full h-screen sm:h-full py-20'>
         <div className='md:text-center' ref={ref} >
           <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
             {inView && 
