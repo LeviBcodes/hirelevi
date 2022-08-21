@@ -85,7 +85,7 @@ const Skills = () => {
     <div name='skills' className='w-full h-screen bg-transparent text-gray-300 px-4 overflow-x-none'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto flex flex-col justify-center w-full sm:h-full py-20 overflow-x-none'>
-        <div className='md:text-center overflow-x-hidden h-full' ref={ref} >
+        <div className='md:text-center overflow-x-hidden h-full sm:h-36 ' ref={ref} >
           <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
             {inView && 
               <motion.p className='text-4xl font-bold inline border-b-4 border-pink-600 pt-10' variants={appear} animate="visible" initial="hidden" exit="exit">Skills</motion.p>
