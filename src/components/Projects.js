@@ -26,8 +26,8 @@ const Projects = () => {
 
     const slideUp = {
         hidden: {
-          opacity: 0,
-          y: "25vh",
+            opacity: 0,
+            y: "25vh",
         },
         visible: {
             opacity: 1,
@@ -42,7 +42,29 @@ const Projects = () => {
             opacity: 0,
             y: "-10vh",
         }
-      }
+    }
+
+    const slideInRight = {
+        hidden: {
+            opacity: 0,
+            x: "20vw",
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: .3,
+                type: 'spring',
+                delay: .1,
+                damping: 55, 
+                stiffness: 400,
+            },
+        },
+        exit: {
+            opacity: 0,
+            x: "-20vw",
+        }
+    }
 
     const controls = useAnimation();
     const [ref, inView] = useInView();
@@ -59,15 +81,19 @@ const Projects = () => {
   const open = () => setModalOpen(true)
 
   return (
-    <div name='projects' className='w-full h-screen bg-transparent text-gray-300 px-4'>
-        <div className='max-w-[1000px] mx-auto flex py-20 md:py-4 flex-col justify-center w-full h-screen sm:h-full'>
-            <div ref={ref} className='pb-8 md:text-center'>
+    <div name='projects' className='w-full h-screen bg-transparent text-gray-300 px-4 overflow-x-none'>
+        <div className='max-w-[1000px] mx-auto flex py-20 md:py-4 flex-col justify-center w-full h-screen sm:h-full overflow-x-hidden'>
+            <div ref={ref} className='pb-8 md:text-center overflow-x-hidden'>
                 <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                     {inView && 
-                        <motion.p className='text-4xl font-bold inline border-b-4 border-pink-600' variants={appear} animate="visible" initial="hidden" exit="exit">Projects</motion.p>
+                        <motion.p className='text-4xl font-bold inline border-b-4 border-pink-600 overflow-x-hidden' variants={appear} animate="visible" initial="hidden" exit="exit">Projects</motion.p>
                     }
                 </AnimatePresence>
-                <p className='py-6'>Check out some of my recent projects</p>
+                <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+                    {inView &&
+                        <motion.p className='py-6 font-medium text-xl overflow-x-hidden' variants={appear} animate="visible" initial="hidden" exit="exit">Check out some of my recent projects</motion.p>
+                    }
+                </AnimatePresence>
             </div>
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
                 <AnimatePresence>

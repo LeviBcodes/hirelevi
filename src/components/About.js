@@ -75,9 +75,9 @@ const About = () => {
     }, [controls, inView]);
 
   return (
-    <div name="about" className="w-full h-screen bg-transparent text-gray-300 overflow-hidden">
-        <motion.div layout className='flex flex-col justify-center items-center w-full h-screen sm:h-full pb-28 sm:pb-0'>
-            <div ref={ref} className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8'>
+    <div name="about" className="w-full h-screen bg-transparent text-gray-300 overflow-x-hidden">
+        <motion.div layout className='flex flex-col justify-center items-center w-full h-screen sm:h-full pb-28 sm:pb-0 overflow-x-hidden'>
+            <div ref={ref} className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 overflow-x-hidden'>
                 <div className='sm:text-right pb-8 pl-4'>
                     <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                         {inView && 
@@ -88,18 +88,18 @@ const About = () => {
                 <div>
                 </div>
             </div>
-            <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
+            <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 overflow-x-hidden'>
                 <div className='sm:text-right text-4xl font-bold overflow:hidden'>
                     <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                         {inView &&
-                            <motion.p layout  variants={slideInLeft} animate="visible" initial="hidden" exit="exit">Hello, I'm Levi. Welcome and thanks for viewing my website. Please take a look around.</motion.p>
+                            <motion.p className="overflow-x-hidden" variants={slideInLeft} animate="visible" initial="hidden" exit="exit">Hello, I'm Levi. Welcome and thanks for viewing my website. Please take a look around.</motion.p>
                         }
                     </AnimatePresence>
                 </div>
-                <div className='sm:text-left text-2xl font-bold'>
+                <div className='sm:text-left text-2xl font-bold overflow-hidden'>
                     <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                         {inView &&
-                            <motion.p layout variants={slideInRight} animate="visible" initial="hidden" exit="exit">I'm a Full Stack Developer. I enjoy building web applications and I'm always looking to learn new technologies.</motion.p>
+                            <motion.p className="overflow-x-hidden" variants={slideInRight} animate="visible" initial="hidden" exit="exit">I'm a Full Stack Developer. I enjoy building web applications and I'm always looking to learn new technologies.</motion.p>
                         }
                     </AnimatePresence>
                 </div>
