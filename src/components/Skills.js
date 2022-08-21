@@ -82,24 +82,24 @@ const Skills = () => {
   }, [controls, inView]);
 
   return (
-    <div name='skills' className='w-full h-screen bg-transparent text-gray-300 px-4 overflow-x-hidden'>
+    <div name='skills' className='w-full h-screen bg-transparent text-gray-300 px-4 overflow-x-none'>
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto flex flex-col justify-center w-full h-screen sm:h-full py-20 overflow-x-hidden'>
-        <div className='md:text-center overflow-x-hidden' ref={ref} >
+      <div className='max-w-[1000px] mx-auto flex flex-col justify-center w-full sm:h-full py-20 overflow-x-none'>
+        <div className='md:text-center overflow-x-hidden h-full' ref={ref} >
           <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
             {inView && 
-              <motion.p className='text-4xl font-bold inline border-b-4 border-pink-600 overflow-x-hidden' variants={appear} animate="visible" initial="hidden" exit="exit">Skills</motion.p>
+              <motion.p className='text-4xl font-bold inline border-b-4 border-pink-600 pt-10' variants={appear} animate="visible" initial="hidden" exit="exit">Skills</motion.p>
             }
           </AnimatePresence>
           <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
             {inView && 
-              <motion.p className='text-left md:text-center pt-7 pb-10 text-xl font-bold overflow-x-hidden' variants={slideInLeft} animate="visible" initial="hidden" exit="exit">Technologies I Use</motion.p>
+              <motion.p className='text-left md:text-center pt-7 pb-10 text-xl font-bold' variants={slideInLeft} animate="visible" initial="hidden" exit="exit">Technologies I Use</motion.p>
             }
           </AnimatePresence>
         </div>
         <AnimatePresence>
           {inView &&
-            <motion.div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center rounded-md overflow-x-hidden' variants={slideUp} animate="visible" initial="hidden" exit="exit">
+            <motion.div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center rounded-md overflow-x-none' variants={slideUp} animate="visible" initial="hidden" exit="exit">
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
                 <img className="w-20 mx-auto" src={Javascript} alt="javascript logo" />
                 <p className='my-4 font-medium text-xl'>JavaScript</p>
