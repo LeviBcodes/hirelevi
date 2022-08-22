@@ -105,14 +105,14 @@ const Projects = () => {
                                     Moviedeets.com
                                 </span>
                                 <div className="pt-8 text-center">
-                                    <button className="text-center rounded-lg px-4 py-1 m-2 bg-white text-gray-700 font-bold text-lg" onClick={()=>(modalOpen ? close() : open())}>View Demo</button>
+                                    <button className="text-center rounded-lg px-4 py-1 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-105 ease-linear duration-100" onClick={()=>(modalOpen ? close() : open())}>View Demo</button>
                                 </div>
                                 <div className='pt-8 text-center'>
                                     <a href="http://www.moviedeets.com" target="_blank" rel="noreferrer">
-                                        <button className='text-center rounded-lg px-4 py-1 m-2 bg-white text-gray-700 font-bold text-lg'>Website</button>
+                                        <button className='text-center rounded-lg px-4 py-1 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-105 ease-linear duration-100'>Website</button>
                                     </a>
                                     <a href="https://www.github.com/LeviBCodes/moviedeets" target="_blank" rel="noreferrer">
-                                        <button className='text-center rounded-lg px-4 py-1 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+                                        <button className='text-center rounded-lg px-4 py-1 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-105 ease-linear duration-100'>Code</button>
                                     </a>
                                 </div>
                             </div>

@@ -92,7 +92,7 @@ const About = () => {
                 <div className='sm:text-right text-4xl font-bold overflow-x-none'>
                     <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                         {inView &&
-                            <motion.p className="overflow-x-none" variants={slideInLeft} animate="visible" initial="hidden" exit="exit">Hello, I'm Levi. Welcome and thanks for viewing my website. Please take a look around.</motion.p>
+                            <motion.p className="overflow-x-none" variants={slideInLeft} animate="visible" initial="hidden" exit="exit">Hello, I'm Levi. Welcome and thanks for viewing my online portfolio.</motion.p>
                         }
                     </AnimatePresence>
                 </div>
