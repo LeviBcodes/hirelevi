@@ -116,7 +116,7 @@ const Skills = () => {
                 <img className="w-20 mx-auto" src={Sql} alt="sql logo" />
                 <p className='my-4 font-medium text-xl'>SQL</p>
               </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 hover:cursor-pointer'>
                 <img className="w-20 mx-auto" src={Html} alt="html logo" />
                 <p className='my-4 font-medium text-xl'>HTML</p>
               </div>
