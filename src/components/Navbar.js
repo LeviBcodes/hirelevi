@@ -20,7 +20,7 @@ const Navbar = ({toggle, active}) => {
             {/* Menu */}
             <ul className='hidden md:flex'>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
-                    <Link to="home" smooth={true} offset={50} duration={500} spy={true} activeClass='active-link'>
+                    <Link to="home" smooth={true} offset={-50} duration={500} spy={true} activeClass='active-link'>
                         Home
                     </Link>
                 </li>
