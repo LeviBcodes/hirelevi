@@ -25,22 +25,22 @@ const Navbar = ({toggle, active}) => {
                     </Link>
                 </li>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
-                    <Link to="about" smooth={true} offset={50} duration={500} spy={true} activeClass='active-link'>
+                    <Link to="about" smooth={true} offset={-10} duration={500} spy={true} activeClass='active-link'>
                         About
                     </Link>
                 </li>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
-                    <Link to="skills" smooth={true} offset={50} duration={500} spy={true} activeClass='active-link'>
+                    <Link to="skills" smooth={true} offset={-10} duration={500} spy={true} activeClass='active-link'>
                         Skills
                     </Link>
                 </li>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
-                    <Link to="projects" smooth={true} offset={50} duration={500} spy={true} activeClass='active-link'>
+                    <Link to="projects" smooth={true} offset={-10} duration={500} spy={true} activeClass='active-link'>
                         Projects
                     </Link>
                 </li>
                 <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
-                    <Link to="contact" smooth={true} offset={50} duration={500} spy={true} activeClass='active-link'>
+                    <Link to="contact" smooth={true} offset={-10} duration={500} spy={true} activeClass='active-link'>
                         Contact
                     </Link>
                 </li>

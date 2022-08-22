@@ -66,7 +66,7 @@
     transform-origin: 0%;
   }
 
-  .active-link {
-    transform: translate(100%);
-    
-  }
+.active-link {
+border-bottom: rgba(112, 226, 255, 0.8) 2px solid;
+padding-bottom: 4px;
+}
