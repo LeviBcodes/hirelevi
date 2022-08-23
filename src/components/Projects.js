@@ -100,7 +100,7 @@ const Projects = () => {
                     {inView &&
                         <motion.div style={{backgroundImage: `url(${Moviedeets})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div group-hover:opacity-50' variants={slideUp} animate="visible" initial="hidden" exit="exit">
                             {/* Hover effects */}
-                            <div className='opacity-0 group-hover:opacity-100'>
+                            <div className='opacity-0 group-hover:opacity-95 ease-linear duration-100'>
                                 <span className='text-2xl font-bold text-white tracking-wider px-3 mx-auto'>
                                     Moviedeets.com
                                 </span>
