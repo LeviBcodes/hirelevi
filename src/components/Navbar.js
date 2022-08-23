@@ -18,33 +18,33 @@ const Navbar = ({toggle, active}) => {
             </div>
 
             {/* Menu */}
-            <ul className='hidden md:flex'>
-                <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
+            <motion.ul layout className='hidden md:flex'>
+                <motion.li className='hover:scale-110 hover:text-white duration-200 hover:font-bold' layoutId='active-link'>
                     <Link to="home" smooth={true} offset={-50} duration={500} spy={true} activeClass='active-link'>
                         Home
                     </Link>
-                </li>
-                <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
+                </motion.li>
+                <motion.li className='hover:scale-110 hover:text-white duration-200 hover:font-bold' layoutId='active-link'>
                     <Link to="about" smooth={true} offset={-20} duration={500} spy={true} activeClass='active-link'>
                         About
                     </Link>
-                </li>
-                <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
+                </motion.li>
+                <motion.li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
                     <Link to="skills" smooth={true} offset={-20} duration={500} spy={true} activeClass='active-link'>
                         Skills
                     </Link>
-                </li>
-                <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
+                </motion.li>
+                <motion.li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
                     <Link to="projects" smooth={true} offset={-20} duration={500} spy={true} activeClass='active-link'>
                         Projects
                     </Link>
-                </li>
-                <li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
+                </motion.li>
+                <motion.li className='hover:scale-110 hover:text-white duration-200 hover:font-bold'>
                     <Link to="contact" smooth={true} offset={-20} duration={500} spy={true} activeClass='active-link'>
                         Contact
                     </Link>
-                </li>
-            </ul>
+                </motion.li>
+            </motion.ul>
 
             {/* Dropdown Button */}
             <div onClick={handleClick} className='md:hidden z-20 text-3xl hover:scale-110 duration-200'>
