@@ -97,11 +97,6 @@ const Navbar = ({toggle, active}) => {
                             Email <HiOutlineMail className='hover:scale-105 duration-300' size={30}/>
                         </a>
                     </li>
-                    <li className='w-[160px] h-[60px] bg-red-700 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 font-bold rounded-lg'>
-                        <a href="" className='flex justify-between items-center w-full text-gray-300 text-lg'>
-                            Resume <BsFillPersonLinesFill className='hover:scale-105 duration-300' size={30}/>
-                        </a>
-                    </li>
                 </ul>
             </div>
             <motion.div class="progress-bar" style={{scaleX: scrollYProgress}} />
