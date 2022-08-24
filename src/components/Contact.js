@@ -59,12 +59,12 @@ const Contact = () => {
                   <motion.p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300' variants={appear} animate="visible" initial="hidden" exit="exit">Contact</motion.p>
                 }
               </AnimatePresence>
-                <p className='text-gray-300 py-4 text-xl font-medium'>Submit the form below to get in touch</p>
+                <motion.p className='text-gray-300 py-4 text-xl font-medium'>Submit the form below to get in touch</motion.p>
             </div>
-              <input className='bg-[#ccd6f6] p-2' type="text" placeholder='Name' name='name' />
-              <input className='my-4 p-2 bg-[#ccd6f6]' type="email" placeholder='Email' name='email' />
-              <textarea className='bg-[#ccd6f6] p-2' name="message" id="" rows="10"></textarea>
-              <button className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center font-bold hover:rounded-md duration-200'>Submit</button>
+                <motion.input className='bg-[#ccd6f6] p-2' type="text" placeholder='Name' name='name' />
+                <motion.input className='my-4 p-2 bg-[#ccd6f6]' type="email" placeholder='Email' name='email' />
+                <motion.textarea className='bg-[#ccd6f6] p-2' name="message" id="" rows="10"></motion.textarea>
+                <motion.button className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center font-bold hover:rounded-md duration-200'>Submit</motion.button>
         </form>
     </div>
   )
