@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
+import MovieDeetsDemo from "../assets/MovieDeetsDemo.mp4"
 
 const dropIn = {
     hidden: {
@@ -27,6 +28,12 @@ const MovieDeetsModal = ({handleClose, text}) => {
     return (
         <Backdrop onClick={handleClose}>
             <motion.div onClick={ (e) => e.stopPropagtion() } className="modal bg-blue-400" variants={dropIn} initial="hidden" animate="visible" exit="exit">
+                <div className="">
+                    <video controls className="align-middle justify-center" width="720">
+                        <source src={MovieDeetsDemo} type="video/mp4" />
+                        Your browser does not support this video format.
+                    </video>
+                </div>
             </motion.div>
         </Backdrop>
     )

@@ -80,7 +80,7 @@ const Home = () => {
             </AnimatePresence>
             <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
                 {inView && 
-                    <motion.h1 className='text-4xl sm:text-7xl font-bold text-white' variants={nameAppear} animate="visible" initial="hidden" exit="exit">Levi Burland</motion.h1>
+                    <motion.h1 className='text-4xl sm:text-7xl font-bold text-white' variants={nameAppear} animate="visible" initial="hidden" exit="exit">Levi</motion.h1>
                 }
             </AnimatePresence>
             <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
